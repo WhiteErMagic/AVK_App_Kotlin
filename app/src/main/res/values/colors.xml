@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray_backgound">#FAFAFA</color>
+    <color name="light_gray">#CCCCCC</color>
+    <color name="medium_gray">#AFAFAF</color>
+    <color name="darker_gray">#919090</color>
+    <color name="near_black">#222222</color>
+    <color name="zebra_blue">#00769F</color>
+    <color name="zebra_yellow">#FFD200</color>
+    <color name="unasigned">#FBEBA2</color>
+    <color name="error_color">#f00</color>
+    <color name="back_add">#105A3D</color>
+    <color name="ready">#C9F1A2</color>
+    <color name="green">#769C51</color>
+    <color name="break_time">#FDD4BE</color>
+    <color name="complete">#F1857B</color>
+    <color name="notready">#FAACBE</color>
+    <color name="ColorPrimary">#1e90ff</color>
+    <color name="pickup_partial">#A4C4E3</color>
+    <color name="transfer_supplier">#BDD7EE</color>
+    <color name="pickup_all">#FBEDA9</color>
+    <color name="cod_model">#6783D5</color>
+    <color name="info_title">#FF305496</color>
+    <color name="chose_cansel">#A64141</color>
+    <color name="gray_light">#ede8e8</color>
+    <color name="release">#F8DBAF</color>
+    <color name="txt_release">#E87854</color>
+    <color name="ready_light">#E0EFD1</color>
+</resources>

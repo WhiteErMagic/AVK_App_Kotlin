@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">AVK_App_Kotlin</string>
+    <!-- Strings related to login -->
+    <string name="prompt_login">Login</string>
+    <string name="prompt_password">Password</string>
+    <string name="enter">Enter</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome! "</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password cannot be empty</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="login_failed_500">"Server Error"</string>
+    <string name="login_failed_error_body">"Server Error"</string>
+
+    <string name="action_settings">Add a Printer</string>
+
+    <string name="zebra_technologies_corp">Zebra Technologies Corp.</string>
+    <string name="zebra_address_line_1"><b>ISV TEAM</b>, Lincolnshire IL, 60069.</string>
+    <string name="zebra_address_line_2">Visit <a href="https://developer.motorolasolutions.com/welcome">developer.zebra.com</a> for more support.</string>
+
+
+    <string name="print">Print</string>
+    <string name="cancel">Cancel</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="retrieve_files">Retrieve Files</string>
+    <string name="send_atr">Send ATR</string>
+    <string name="response_from_printer">Response from Printer</string>
+
+    <string name="printer_status">Printer Status</string>
+    <string name="rotation_prompt">Choose a rotation</string>
+    <string name="image_selection">Select an Image</string>
+    <string name="sign_and_print">Sign &amp;\nPrint</string>
+    <string name="sign_here">Sign here:</string>
+
+
+    <string name="store_check">Check to store on printer</string>
+    <string name="path_hint">Path to store on printer</string>
+    <string name="printer_selection">Select a Printer</string>
+    <string name="discovered_printers">Discovered printers</string>
+    <string name="searching_for_printers">Searching for printers&#8230;</string>
+    <string name="connecting_to_printer">Connecting to printer&#8230;</string>
+    <string name="printer_connected">Printer connected</string>
+    <string name="printer_connection_failed">Printer connection failed</string>
+    <string name="connected_to_printer">Connected to printer:</string>
+    <string name="connection_error">Connection error</string>
+    <string name="print_successful">Print successful</string>
+    <string name="print_failed">Print failed:</string>
+    <string name="printer_paused">Printer paused</string>
+    <string name="head_open">Head open</string>
+    <string name="paper_out">Paper out</string>
+    <string name="cannot_print">Cannot print</string>
+    <string name="no_printers_found">No printers found</string>
+    <string name="ip_dns">IP/DNS</string>
+    <string name="bluetooth_r">Bluetooth (R)</string>
+    <string name="ip_address">Ip Address:</string>
+    <string name="port">Port:</string>
+    <string name="_9100">9100</string>
+    <string name="mac_address">MAC Address:</string>
+    <string name="todo">TODO</string>
+    <string name="title_activity_print">Print</string>
+
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="title_activity_planner">Planner</string>
+    <string name="title_activity_order">Order</string>
+
+    <string name="activity_intent_filter_action">com.zebra.defaultprinterdemo.ACTION</string>
+    <string name="activity_reciver_filter_action">com.zebra.defaultprinterdemo.ACTION_RECIVER</string>
+    <string name="datawedge_intent_key_data">com.symbol.datawedge.data_string</string>
+    <string name="action_interchange">com.zebra.defaultprinterdemo.interchange.ACTION_RECIVER</string>
+
+    <string name="btn_back">&lt; Back</string>
+
+    <string name="lunch">Lunch</string>-->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //Статусы пикаперов
+    <string name="Goingto">Going to&#160;</string>
+    <string name="Arrived">Arrived to&#160;</string>
+    <string name="LunchStart">Lunch</string>
+    <string name="InOffice">In office</string>
+    <string name="ReturningToOffice">Returning to office</string>
+    <string name="pickupers_drivers">PICKUPERS\n&amp; DRIVERS</string>
+
+    <string name="btnLunch">LUNCH</string>
+    <string name="left">LEFT: </string>
+
+</resources>

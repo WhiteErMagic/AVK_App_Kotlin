@@ -1,0 +1,417 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 130,
+    "identityHash": "8b3175a079c336b2fe40447b7c6b2b58",
+    "entities": [
+      {
+        "tableName": "table_goods",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`uid` TEXT NOT NULL, `spec` TEXT NOT NULL, `supplier` TEXT NOT NULL, `brand` TEXT, `model` TEXT, `memory` TEXT, `color` TEXT, `model_code` TEXT, `pcs` INTEGER NOT NULL, `pcs_fact` INTEGER NOT NULL, `is_check` TEXT, `instruction` TEXT, `category` TEXT, `masterbox` TEXT, `ask_isunseal` TEXT, `pickup_date` TEXT, `purchase_date` TEXT, `is_unseal` TEXT, `is_unseal_txt` TEXT, `category_clock` TEXT, `need_imei` TEXT, `remain_pcs` INTEGER NOT NULL, `unseal` INTEGER NOT NULL, `algorithm` TEXT NOT NULL, `memcolspec` TEXT NOT NULL, PRIMARY KEY(`uid`, `spec`, `supplier`), FOREIGN KEY(`supplier`) REFERENCES `table_suppliers`(`code_supplier`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "uid",
+            "columnName": "uid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "spec",
+            "columnName": "spec",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "supplier",
+            "columnName": "supplier",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "brand",
+            "columnName": "brand",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "model",
+            "columnName": "model",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "memory",
+            "columnName": "memory",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "color",
+            "columnName": "color",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "modelCode",
+            "columnName": "model_code",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pcs",
+            "columnName": "pcs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pcsFact",
+            "columnName": "pcs_fact",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isCheck",
+            "columnName": "is_check",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "instruction",
+            "columnName": "instruction",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "masterbox",
+            "columnName": "masterbox",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "askIsUnseal",
+            "columnName": "ask_isunseal",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pickupDate",
+            "columnName": "pickup_date",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "purchaseDate",
+            "columnName": "purchase_date",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isUnseal",
+            "columnName": "is_unseal",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isUnsealTxt",
+            "columnName": "is_unseal_txt",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "categoryClock",
+            "columnName": "category_clock",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "needImei",
+            "columnName": "need_imei",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "remainPcs",
+            "columnName": "remain_pcs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unseal",
+            "columnName": "unseal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "algorithm",
+            "columnName": "algorithm",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "memcolspec",
+            "columnName": "memcolspec",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "uid",
+            "spec",
+            "supplier"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_table_goods_supplier",
+            "unique": false,
+            "columnNames": [
+              "supplier"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_table_goods_supplier` ON `${TABLE_NAME}` (`supplier`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "table_suppliers",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "supplier"
+            ],
+            "referencedColumns": [
+              "code_supplier"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "table_suppliers",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `code_supplier` TEXT NOT NULL, `name` TEXT NOT NULL, `address` TEXT NOT NULL, `address2` TEXT NOT NULL, `break_start` TEXT NOT NULL, `break_end` TEXT NOT NULL, `purchase_date` TEXT NOT NULL, `manager` TEXT NOT NULL, `phone` TEXT NOT NULL, `hkzone` TEXT NOT NULL, `pickuper` TEXT NOT NULL, `enable` TEXT NOT NULL, `warehouse` TEXT NOT NULL, `description` TEXT NOT NULL, PRIMARY KEY(`id`, `code_supplier`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codeSupplier",
+            "columnName": "code_supplier",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "address",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "address2",
+            "columnName": "address2",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "breakStart",
+            "columnName": "break_start",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "breakEnd",
+            "columnName": "break_end",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "purchaseDate",
+            "columnName": "purchase_date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "manager",
+            "columnName": "manager",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "phone",
+            "columnName": "phone",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hkzone",
+            "columnName": "hkzone",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pickuper",
+            "columnName": "pickuper",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "enable",
+            "columnName": "enable",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "warehouse",
+            "columnName": "warehouse",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id",
+            "code_supplier"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_table_suppliers_code_supplier",
+            "unique": true,
+            "columnNames": [
+              "code_supplier"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_table_suppliers_code_supplier` ON `${TABLE_NAME}` (`code_supplier`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "table_barcode",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`uid` TEXT NOT NULL, `spec` TEXT NOT NULL, `barcode` TEXT NOT NULL, `is_check` TEXT NOT NULL, `photo` TEXT NOT NULL, `brand` TEXT NOT NULL, `model` TEXT NOT NULL, `memory` TEXT NOT NULL, `color` TEXT NOT NULL, `model_code` TEXT NOT NULL, `category_clock` TEXT NOT NULL, `category` TEXT NOT NULL, `masterbox` TEXT NOT NULL, `unseal_uid` TEXT NOT NULL, PRIMARY KEY(`barcode`, `uid`, `spec`))",
+        "fields": [
+          {
+            "fieldPath": "uid",
+            "columnName": "uid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "spec",
+            "columnName": "spec",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "barcode",
+            "columnName": "barcode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isCheck",
+            "columnName": "is_check",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "photo",
+            "columnName": "photo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "brand",
+            "columnName": "brand",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "model",
+            "columnName": "model",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "memory",
+            "columnName": "memory",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "color",
+            "columnName": "color",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "modelCode",
+            "columnName": "model_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "categoryClock",
+            "columnName": "category_clock",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "masterbox",
+            "columnName": "masterbox",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unsealUid",
+            "columnName": "unseal_uid",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "barcode",
+            "uid",
+            "spec"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8b3175a079c336b2fe40447b7c6b2b58')"
+    ]
+  }
+}
